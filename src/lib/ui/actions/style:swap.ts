@@ -18,4 +18,4 @@ export const swap = tv({
 	},
 })
 
-export type Props = VariantProps<typeof swap>
+export type SwapStyleProps = VariantProps<typeof swap>

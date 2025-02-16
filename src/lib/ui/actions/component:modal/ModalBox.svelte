@@ -5,7 +5,7 @@
 
 	let {
 		children,
-		class: className,
+		class: className = "",
 		...props
 	}: Omit<HTMLAttributes<HTMLElement>, "class" | "style"> & {
 		children: Snippet

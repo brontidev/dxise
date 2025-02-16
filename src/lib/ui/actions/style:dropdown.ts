@@ -30,4 +30,4 @@ export const dropdown = tv({
 	},
 })
 
-export type Props = VariantProps<typeof dropdown>
+export type DropdownStyleProps = VariantProps<typeof dropdown>

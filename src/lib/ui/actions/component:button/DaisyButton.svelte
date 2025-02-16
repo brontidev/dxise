@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from "svelte"
 	import { twMerge } from "tailwind-merge"
-	import { button, type Props } from "../style:button.js"
+	import { button, type ButtonStyleProps } from "../style:button.js"
 	let {
 		children,
 		element,
@@ -12,12 +12,12 @@
 		children: Snippet
 		element: Snippet<[props: { [x: string]: unknown }, children: Snippet]>
 		class?: string
-		style?: Partial<Props>
+		style?: Partial<ButtonStyleProps>
 		[x: string]: unknown
 	} = $props()
 
 	let _props = $derived({
-		class: twMerge(button(style), className),
+		class: button({ ...style, className }),
 		...rest,
 	})
 </script>

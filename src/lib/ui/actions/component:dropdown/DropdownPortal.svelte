@@ -4,7 +4,7 @@
 	let {
 		children,
 	}: {
-		children: Snippet<[style: (className?: string) => string]>
+		children: Snippet<[style: (className: string) => string]>
 	} = $props()
 	let context = getContext<DropdownContext>("_dropdown_style_content")
 </script>

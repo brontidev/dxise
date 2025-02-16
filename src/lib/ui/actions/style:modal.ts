@@ -29,4 +29,4 @@ export const modal = tv({
 	},
 })
 
-export type Props = VariantProps<typeof modal>
+export type ModalStyleProps = VariantProps<typeof modal>

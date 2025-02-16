@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { getContext, type Snippet } from "svelte"
-	import { contextSymbol, type SwapContext } from "./index.js"
+	import { swapContextSymbol, type SwapContext } from "./index.js"
 	let {
 		element,
 	}: {
-		element: Snippet<[style: (className?: string) => string]>
+		element: Snippet<[style: (className: string) => string]>
 	} = $props()
-	let context = getContext<SwapContext>(contextSymbol)
+	let context = getContext<SwapContext>(swapContextSymbol)
 </script>
 
 {#if context}

@@ -1,6 +1,6 @@
 import { tv, type VariantProps } from "tailwind-variants"
 
-export const accordion = tv({
+export const collapse = tv({
 	base: "collapse",
 	slots: {
 		title: "collapse-title",
@@ -24,4 +24,4 @@ export const accordion = tv({
 	},
 })
 
-export type Props = VariantProps<typeof accordion>
+export type CollapseStyleProps = VariantProps<typeof collapse>

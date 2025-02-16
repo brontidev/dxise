@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { setContext, type Snippet } from "svelte"
 	import type { HTMLDialogAttributes } from "svelte/elements"
-	import { modal, type Props } from "../style:modal.js"
+	import { modal, type ModalStyleProps } from "../style:modal.js"
 	import { twMerge } from "tailwind-merge"
 	import { contextSymbol, type ModalContext } from "./index.js"
 	import { wrap } from "$lib/ui/util/mergeWrap.js"
@@ -14,7 +14,7 @@
 	}: Omit<HTMLDialogAttributes, "class" | "style" | "open"> & {
 		children: Snippet
 		class?: string
-		style?: Partial<Props>
+		style?: Partial<ModalStyleProps>
 	} = $props()
 
 	let { base, action, backdrop, box } = $derived(modal(style))

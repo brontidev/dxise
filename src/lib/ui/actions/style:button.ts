@@ -1,4 +1,5 @@
 import { tv, type VariantProps } from "tailwind-variants"
+import type { Sizes } from "../util/types.js"
 
 export const button = tv({
 	base: "btn",
@@ -43,7 +44,8 @@ export const button = tv({
 			default: "",
 			md: "btn-md",
 			lg: "btn-lg",
-		},
+			xl: "btn-xl",
+		} satisfies Sizes,
 	},
 	defaultVariants: {
 		active: false,
@@ -56,4 +58,4 @@ export const button = tv({
 	},
 })
 
-export type Props = VariantProps<typeof button>
+export type ButtonStyleProps = VariantProps<typeof button>

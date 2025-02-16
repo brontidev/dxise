@@ -10,10 +10,19 @@
 					"tests": false,
 					"subdirectory": true,
 					"list": true,
-					"files": ["Button.svelte", "DaisyButton.svelte", "Link.svelte", "index.ts"],
-					"localDependencies": ["actions/style:button"],
+					"files": [
+						"Button.svelte",
+						"DaisyButton.svelte",
+						"Link.svelte",
+						"index.ts"
+					],
+					"localDependencies": [
+						"actions/style:button"
+					],
 					"dependencies": [],
-					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"devDependencies": [
+						"tailwind-merge@^3.0.1"
+					],
 					"_imports_": {
 						"../style:button.js": "{{actions/style:button}}.js"
 					}
@@ -31,15 +40,25 @@
 						"DropdownPortal.svelte",
 						"index.ts"
 					],
+					"files": [
+						"Dropdown.svelte",
+						"DropdownAction.svelte",
+						"DropdownPortal.svelte",
+						"index.ts"
+					],
 					"localDependencies": [
 						"actions/style:dropdown",
+						"util/mergeWrap",
 						"actions/component:button",
 						"actions/style:button"
 					],
 					"dependencies": [],
-					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"devDependencies": [
+						"tailwind-merge@^3.0.1"
+					],
 					"_imports_": {
 						"../style:dropdown.js": "{{actions/style:dropdown}}.js",
+						"$lib/ui/util/mergeWrap.js": "{{util/mergeWrap}}.js",
 						"$lib/ui/actions/component:button/DaisyButton.svelte": "{{actions/component:button}}/DaisyButton.svelte",
 						"../style:button.js": "{{actions/style:button}}.js"
 					}
@@ -51,10 +70,20 @@
 					"tests": false,
 					"subdirectory": true,
 					"list": true,
-					"files": ["Modal.svelte", "ModalBackdrop.svelte", "ModalBox.svelte", "index.ts"],
-					"localDependencies": ["actions/style:modal", "util/mergeWrap"],
+					"files": [
+						"Modal.svelte",
+						"ModalBackdrop.svelte",
+						"ModalBox.svelte",
+						"index.ts"
+					],
+					"localDependencies": [
+						"actions/style:modal",
+						"util/mergeWrap"
+					],
 					"dependencies": [],
-					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"devDependencies": [
+						"tailwind-merge@^3.0.1"
+					],
 					"_imports_": {
 						"../style:modal.js": "{{actions/style:modal}}.js",
 						"$lib/ui/util/mergeWrap.js": "{{util/mergeWrap}}.js"
@@ -74,9 +103,12 @@
 						"SwapOn.svelte",
 						"index.ts"
 					],
-					"localDependencies": ["actions/style:swap", "util/mergeWrap"],
+					"localDependencies": [
+						"actions/style:swap",
+						"util/mergeWrap"
+					],
 					"dependencies": [],
-					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"devDependencies": [],
 					"_imports_": {
 						"../style:swap.js": "{{actions/style:swap}}.js",
 						"$lib/ui/util/mergeWrap.js": "{{util/mergeWrap}}.js"
@@ -89,11 +121,19 @@
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
-					"files": ["style:button.ts"],
-					"localDependencies": [],
-					"_imports_": {},
+					"files": [
+						"style:button.ts"
+					],
+					"localDependencies": [
+						"util/types"
+					],
+					"_imports_": {
+						"../util/types.js": "{{util/types}}.js"
+					},
 					"dependencies": [],
-					"devDependencies": ["tailwind-variants@^0.3.1"]
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
 				},
 				{
 					"name": "style:dropdown",
@@ -102,11 +142,15 @@
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
-					"files": ["style:dropdown.ts"],
+					"files": [
+						"style:dropdown.ts"
+					],
 					"localDependencies": [],
 					"_imports_": {},
 					"dependencies": [],
-					"devDependencies": ["tailwind-variants@^0.3.1"]
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
 				},
 				{
 					"name": "style:modal",
@@ -115,11 +159,15 @@
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
-					"files": ["style:modal.ts"],
+					"files": [
+						"style:modal.ts"
+					],
 					"localDependencies": [],
 					"_imports_": {},
 					"dependencies": [],
-					"devDependencies": ["tailwind-variants@^0.3.1"]
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
 				},
 				{
 					"name": "style:swap",
@@ -128,11 +176,134 @@
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
-					"files": ["style:swap.ts"],
+					"files": [
+						"style:swap.ts"
+					],
 					"localDependencies": [],
 					"_imports_": {},
 					"dependencies": [],
-					"devDependencies": ["tailwind-variants@^0.3.1"]
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				}
+			]
+		},
+		{
+			"name": "data_display",
+			"blocks": [
+				{
+					"name": "style:avatar",
+					"directory": "src/lib/ui/data_display",
+					"category": "data_display",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"style:avatar.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				},
+				{
+					"name": "style:badge",
+					"directory": "src/lib/ui/data_display",
+					"category": "data_display",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"style:badge.ts"
+					],
+					"localDependencies": [
+						"util/types"
+					],
+					"_imports_": {
+						"../util/types.js": "{{util/types}}.js"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				},
+				{
+					"name": "style:card",
+					"directory": "src/lib/ui/data_display",
+					"category": "data_display",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"style:card.ts"
+					],
+					"localDependencies": [
+						"util/types"
+					],
+					"_imports_": {
+						"../util/types.js": "{{util/types}}.js"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				},
+				{
+					"name": "style:carousel",
+					"directory": "src/lib/ui/data_display",
+					"category": "data_display",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"style:carousel.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				},
+				{
+					"name": "style:collapse",
+					"directory": "src/lib/ui/data_display",
+					"category": "data_display",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"style:collapse.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				},
+				{
+					"name": "style:kbd",
+					"directory": "src/lib/ui/data_display",
+					"category": "data_display",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"style:kbd.ts"
+					],
+					"localDependencies": [
+						"util/types"
+					],
+					"_imports_": {
+						"../util/types.js": "{{util/types}}.js"
+					},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
 				}
 			]
 		},
@@ -159,11 +330,52 @@
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
-					"files": ["style:join.ts"],
+					"files": [
+						"style:join.ts"
+					],
 					"localDependencies": [],
 					"_imports_": {},
 					"dependencies": [],
-					"devDependencies": ["tailwind-variants@^0.3.1"]
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				}
+			]
+		},
+		{
+			"name": "util",
+			"blocks": [
+				{
+					"name": "mergeWrap",
+					"directory": "src/lib/ui/util",
+					"category": "util",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"mergeWrap.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": [
+						"tailwind-variants@^0.3.1"
+					]
+				},
+				{
+					"name": "types",
+					"directory": "src/lib/ui/util",
+					"category": "util",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"types.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
 				}
 			]
 		},

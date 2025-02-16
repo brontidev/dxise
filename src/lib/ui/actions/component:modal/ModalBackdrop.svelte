@@ -5,7 +5,7 @@
 
 	let {
 		children,
-		class: className,
+		class: className = "",
 		...props
 	}: Omit<HTMLFormAttributes, "class" | "style" | "action" | "method"> & {
 		children: Snippet

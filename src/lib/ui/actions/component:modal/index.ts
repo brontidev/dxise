@@ -6,7 +6,7 @@ import ModalBox from "./ModalBox.svelte"
 
 export type ModalContext = Record<
 	keyof Omit<ReturnType<typeof modal>, "base" | "toggle">,
-	(className?: string) => string
+	(className: string) => string
 >
 export const contextSymbol = Symbol("modal context")
 
