@@ -10,7 +10,7 @@
 					"tests": false,
 					"subdirectory": true,
 					"list": true,
-					"files": ["Button.svelte", "DaisyButton.svelte", "Link.svelte"],
+					"files": ["Button.svelte", "DaisyButton.svelte", "Link.svelte", "index.ts"],
 					"localDependencies": ["actions/style:button"],
 					"dependencies": [],
 					"devDependencies": ["tailwind-merge@^3.0.1"],
@@ -25,7 +25,12 @@
 					"tests": false,
 					"subdirectory": true,
 					"list": true,
-					"files": ["Dropdown.svelte", "DropdownButton.svelte", "DropdownPortal.svelte"],
+					"files": [
+						"Dropdown.svelte",
+						"DropdownAction.svelte",
+						"DropdownPortal.svelte",
+						"index.ts"
+					],
 					"localDependencies": [
 						"actions/style:dropdown",
 						"actions/component:button",
@@ -37,6 +42,44 @@
 						"../style:dropdown.js": "{{actions/style:dropdown}}.js",
 						"$lib/ui/actions/component:button/DaisyButton.svelte": "{{actions/component:button}}/DaisyButton.svelte",
 						"../style:button.js": "{{actions/style:button}}.js"
+					}
+				},
+				{
+					"name": "component:modal",
+					"directory": "src/lib/ui/actions/component:modal",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": ["Modal.svelte", "ModalBackdrop.svelte", "ModalBox.svelte", "index.ts"],
+					"localDependencies": ["actions/style:modal", "util/mergeWrap"],
+					"dependencies": [],
+					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"_imports_": {
+						"../style:modal.js": "{{actions/style:modal}}.js",
+						"$lib/ui/util/mergeWrap.js": "{{util/mergeWrap}}.js"
+					}
+				},
+				{
+					"name": "component:swap",
+					"directory": "src/lib/ui/actions/component:swap",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"Swap.svelte",
+						"SwapIntermediate.svelte",
+						"SwapOff.svelte",
+						"SwapOn.svelte",
+						"index.ts"
+					],
+					"localDependencies": ["actions/style:swap", "util/mergeWrap"],
+					"dependencies": [],
+					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"_imports_": {
+						"../style:swap.js": "{{actions/style:swap}}.js",
+						"$lib/ui/util/mergeWrap.js": "{{util/mergeWrap}}.js"
 					}
 				},
 				{
@@ -77,12 +120,38 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": ["tailwind-variants@^0.3.1"]
+				},
+				{
+					"name": "style:swap",
+					"directory": "src/lib/ui/actions",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["style:swap.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-variants@^0.3.1"]
 				}
 			]
 		},
 		{
 			"name": "layout",
 			"blocks": [
+				{
+					"name": "style:accordion",
+					"directory": "src/lib/ui/layout",
+					"category": "layout",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["style:accordion.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-variants@^0.3.1"]
+				},
 				{
 					"name": "style:join",
 					"directory": "src/lib/ui/layout",
@@ -95,6 +164,24 @@
 					"_imports_": {},
 					"dependencies": [],
 					"devDependencies": ["tailwind-variants@^0.3.1"]
+				}
+			]
+		},
+		{
+			"name": "util",
+			"blocks": [
+				{
+					"name": "mergeWrap",
+					"directory": "src/lib/ui/util",
+					"category": "util",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["mergeWrap.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-merge@^3.0.1"]
 				}
 			]
 		}
