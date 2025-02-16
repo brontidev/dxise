@@ -1,59 +1,59 @@
-import { tv, type VariantProps } from 'tailwind-variants';
+import { tv, type VariantProps } from "tailwind-variants"
 
 export const button = tv({
-	base: 'btn',
+	base: "btn",
 	variants: {
 		color: {
-			neutral: 'btn-neutral',
-			primary: 'btn-primary',
-			secondary: 'btn-secondary',
-			accent: 'btn-accent',
-			info: 'btn-info',
-			success: 'btn-success',
-			warning: 'btn-warning',
-			error: 'btn-error',
-			default: ''
+			neutral: "btn-neutral",
+			primary: "btn-primary",
+			secondary: "btn-secondary",
+			accent: "btn-accent",
+			info: "btn-info",
+			success: "btn-success",
+			warning: "btn-warning",
+			error: "btn-error",
+			default: "",
 		},
 		style: {
-			outline: 'btn-outline',
-			soft: 'btn-soft',
-			ghost: 'btn-ghost',
-			link: 'btn-link',
-			default: ''
+			outline: "btn-outline",
+			soft: "btn-soft",
+			ghost: "btn-ghost",
+			link: "btn-link",
+			default: "",
 		},
 		disabled: {
-			true: 'btn-disabled'
+			true: "btn-disabled",
 		},
 		active: {
-			true: 'btn-active'
+			true: "btn-active",
 		},
 		shape: {
-			circle: 'btn-circle',
-			square: 'btn-square',
-			default: ''
+			circle: "btn-circle",
+			square: "btn-square",
+			default: "",
 		},
 		width: {
-			wide: 'btn-wide',
-			block: 'btn-block',
-			default: ''
+			wide: "btn-wide",
+			block: "btn-block",
+			default: "",
 		},
 		size: {
-			xs: 'btn-xs',
-			sm: 'btn-sm',
-			default: '',
-			md: 'btn-md',
-			lg: 'btn-lg'
-		}
+			xs: "btn-xs",
+			sm: "btn-sm",
+			default: "",
+			md: "btn-md",
+			lg: "btn-lg",
+		},
 	},
 	defaultVariants: {
 		active: false,
 		disabled: false,
-		color: 'default',
-		width: 'default',
-		shape: 'default',
-		size: 'default',
-		style: 'default'
-	}
-});
+		color: "default",
+		width: "default",
+		shape: "default",
+		size: "default",
+		style: "default",
+	},
+})
 
-export type Props = VariantProps<typeof button>;
+export type Props = VariantProps<typeof button>

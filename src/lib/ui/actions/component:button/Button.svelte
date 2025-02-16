@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import BaseButton from './DaisyButton.svelte';
-	import type { Props } from '../style:button.js';
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import type { Snippet } from "svelte"
+	import BaseButton from "./DaisyButton.svelte"
+	import type { Props } from "../style:button.js"
+	import type { HTMLButtonAttributes } from "svelte/elements"
 	let {
 		...props
-	}: Omit<HTMLButtonAttributes, 'class' | 'style'> & {
-		children: Snippet;
-		class?: string;
-		style?: Partial<Props>;
-	} = $props();
+	}: Omit<HTMLButtonAttributes, "class" | "style"> & {
+		children: Snippet
+		class?: string
+		style?: Partial<Props>
+	} = $props()
 </script>
 
 <BaseButton {...props}>

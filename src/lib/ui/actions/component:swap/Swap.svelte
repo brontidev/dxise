@@ -6,28 +6,28 @@
 	import { wrap } from "$lib/ui/util/mergeWrap.js"
 	import { twMerge } from "tailwind-merge"
 
-    let {
+	let {
 		children,
 		class: className,
 		style,
-        checked = $bindable(false),
-        stopdefault = false,
+		checked = $bindable(false),
+		stopdefault = false,
 		...props
-	}: Omit<HTMLLabelAttributes, 'class' | 'style' | 'open'> & {
-		children: Snippet;
-		class?: string;
-		style?: Partial<Omit<Props, 'active'>>;
-        checked: boolean;
-        stopdefault?: boolean;
-	} = $props();
+	}: Omit<HTMLLabelAttributes, "class" | "style" | "open"> & {
+		children: Snippet
+		class?: string
+		style?: Partial<Omit<Props, "active">>
+		checked: boolean
+		stopdefault?: boolean
+	} = $props()
 
-    let { base, intermediate, on, off } = $derived(swap({ active: checked, ...style }))
-    let context = $derived({
-        intermediate: wrap(intermediate),
-        off: wrap(off),
-        on: wrap(on)
-    })
-    setContext<SwapContext>(contextSymbol, context)
+	let { base, intermediate, on, off } = $derived(swap({ active: checked, ...style }))
+	let context = $derived({
+		intermediate: wrap(intermediate),
+		off: wrap(off),
+		on: wrap(on),
+	})
+	setContext<SwapContext>(contextSymbol, context)
 </script>
 
 <!-- 
@@ -47,6 +47,9 @@
 </Swap>
 -->
 
-<label class={twMerge(base(), className)} {...{ ...props, onclick: props.onclick ?? (() => checked = !checked) }}>
-    {@render children()}
+<label
+	class={twMerge(base(), className)}
+	{...{ ...props, onclick: props.onclick ?? (() => (checked = !checked)) }}
+>
+	{@render children()}
 </label>

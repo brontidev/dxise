@@ -1,14 +1,14 @@
-import { tv } from 'tailwind-variants';
+import { tv } from "tailwind-variants"
 
 export const join = tv({
-	base: 'join',
+	base: "join",
 	slots: {
-		item: 'join-item'
+		item: "join-item",
 	},
 	variants: {
 		direction: {
-			h: 'join-horizontal',
-			v: 'join-horizontal'
-		}
-	}
-});
+			h: "join-horizontal",
+			v: "join-horizontal",
+		},
+	},
+})
