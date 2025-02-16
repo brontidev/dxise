@@ -32,7 +32,7 @@ export const button = tv({
 			square: 'btn-square',
 			default: ''
 		},
-		mod: {
+		width: {
 			wide: 'btn-wide',
 			block: 'btn-block',
 			default: ''
@@ -48,8 +48,8 @@ export const button = tv({
 	defaultVariants: {
 		active: false,
 		disabled: false,
-		color: 'primary',
-		mod: 'default',
+		color: 'default',
+		width: 'default',
 		shape: 'default',
 		size: 'default',
 		style: 'default'

@@ -1,12 +1,18 @@
 import Dropdown from './Dropdown.svelte';
-import DropdownButton from './DropdownButton.svelte';
+import DropdownAction from './DropdownAction.svelte';
 import DropdownPortal from './DropdownPortal.svelte';
+import { dropdown } from '../style:dropdown.js';
+
+export type DropdownContext = Record<
+	keyof Omit<ReturnType<typeof dropdown>, 'base'>,
+	(className: string) => string
+>;
 
 export {
 	Dropdown as Root,
-	DropdownButton as Button,
+	DropdownAction as Action,
 	DropdownPortal as Portal,
 	Dropdown,
-	DropdownButton,
+	DropdownAction,
 	DropdownPortal
 };

@@ -1,4 +1,4 @@
-import { tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 export const modal = tv({
 	base: 'modal',
@@ -28,3 +28,5 @@ export const modal = tv({
 		}
 	}
 });
+
+export type Props = VariantProps<typeof modal>;

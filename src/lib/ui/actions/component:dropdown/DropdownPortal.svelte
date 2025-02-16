@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { getContext, type Snippet } from 'svelte';
+	import type { DropdownContext } from './index.js';
 	let {
 		children
 	}: {
-		children: Snippet<[style: (className: string) => string]>;
+		children: Snippet<[style: (className?: string) => string]>;
 	} = $props();
-	let content = getContext<(className: string) => string>('_dropdown_style_content');
+	let context = getContext<DropdownContext>('_dropdown_style_content');
 </script>
 
-{#if content}
-	{@render children(content)}
+{#if context}
+	{@render children(context.content)}
 {/if}

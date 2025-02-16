@@ -3,6 +3,7 @@
 	import { twMerge } from 'tailwind-merge';
 	import { dropdown, type Props } from '../style:dropdown.js';
 	import type { HTMLDetailsAttributes } from 'svelte/elements';
+	import type { DropdownContext } from './index.js';
 	let {
 		children,
 		class: className,
@@ -15,7 +16,9 @@
 	} = $props();
 
 	let { base, content } = $derived(dropdown(style));
-	setContext('_dropdown_style_content', (className: string) => twMerge(content(), className));
+	setContext<DropdownContext>('_dropdown_style_content', {
+		content: (className: string) => twMerge(content(), className)
+	});
 </script>
 
 <details class={twMerge(base(), className)} {...props}>
