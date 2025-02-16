@@ -1,0 +1,102 @@
+{
+	"categories": [
+		{
+			"name": "actions",
+			"blocks": [
+				{
+					"name": "component:button",
+					"directory": "src/lib/ui/actions/component:button",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": ["Button.svelte", "DaisyButton.svelte", "Link.svelte"],
+					"localDependencies": ["actions/style:button"],
+					"dependencies": [],
+					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"_imports_": {
+						"../style:button.js": "{{actions/style:button}}.js"
+					}
+				},
+				{
+					"name": "component:dropdown",
+					"directory": "src/lib/ui/actions/component:dropdown",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": ["Dropdown.svelte", "DropdownButton.svelte", "DropdownPortal.svelte"],
+					"localDependencies": [
+						"actions/style:dropdown",
+						"actions/component:button",
+						"actions/style:button"
+					],
+					"dependencies": [],
+					"devDependencies": ["tailwind-merge@^3.0.1"],
+					"_imports_": {
+						"../style:dropdown.js": "{{actions/style:dropdown}}.js",
+						"$lib/ui/actions/component:button/DaisyButton.svelte": "{{actions/component:button}}/DaisyButton.svelte",
+						"../style:button.js": "{{actions/style:button}}.js"
+					}
+				},
+				{
+					"name": "style:button",
+					"directory": "src/lib/ui/actions",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["style:button.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-variants@^0.3.1"]
+				},
+				{
+					"name": "style:dropdown",
+					"directory": "src/lib/ui/actions",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["style:dropdown.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-variants@^0.3.1"]
+				},
+				{
+					"name": "style:modal",
+					"directory": "src/lib/ui/actions",
+					"category": "actions",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["style:modal.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-variants@^0.3.1"]
+				}
+			]
+		},
+		{
+			"name": "layout",
+			"blocks": [
+				{
+					"name": "style:join",
+					"directory": "src/lib/ui/layout",
+					"category": "layout",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": ["style:join.ts"],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": ["tailwind-variants@^0.3.1"]
+				}
+			]
+		}
+	]
+}
